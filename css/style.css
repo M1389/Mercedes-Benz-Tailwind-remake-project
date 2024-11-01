@@ -1,0 +1,13 @@
+
+
+
+
+@font-face {
+    font-family: MCD;
+    src: url(../assets/Fonts/Corporate\ A\ Bold.otf);
+}
+
+*{
+    font-family: MCD;
+}
+
