@@ -10,14 +10,25 @@
 </head>
 <body>
     <header>
-        <nav class="bg-[black] flex flex-row justify-between text-[#fff] items-center px-[5%]">
-            <div>
-                <p>Deutsch | English</p>
-                <p>Provider/Privacy</p>
+        <nav class="h-[70px] bg-[black] flex flex-row justify-between px-[5%] text-[#fff] items-center  text-[12px] relative">
+            <div class="flex w-[30%] flex-row gap-[60px] font-sans">
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Deutsch | English</p>
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Provider/Privacy</p>
             </div>
-            <img src="./assets/Images/MB-star_n_web (1).svg" alt="Benz-Icon">
-            <div>
-                Search
+            <img class="w-[112px] h-[42px] self-center" src="./assets/Images/MB-star_n_web (1).svg" alt="Benz-Icon">
+            <div class="flex w-[30%] flex-row gap-[60px] font-sans justify-end">
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Search <i class='bx bx-search text-[14px]' ></i></p>
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Login</p>
+            </div>
+            <div class="bg-[black] bg-opacity-90 backdrop-blur-[10px] backface-visible h-[64px] absolute top-[70px] left-0 right-0 px-[5%] flex items-center">
+                <ul class="flex flex-row justify-between w-[50%] mx-auto">
+                    <li><a class="text-[14px]" href="#">Art & Culture</a></li>
+                    <li><a class="text-[14px]" href="#">Sustainability</a></li>
+                    <li><a class="text-[14px]" href="#">Design</a></li>
+                    <li><a class="text-[14px]" href="#">Innovation</a></li>
+                    <li><a class="text-[14px]" href="#">Exclusive</a></li>
+                    <li><a class="text-[14px]" href="#">Vehicles</a></li>
+                </ul>
             </div>
         </nav>
     </header>
