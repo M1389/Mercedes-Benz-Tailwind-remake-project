@@ -10,24 +10,50 @@
 </head>
 <body>
     <header>
-        <nav class="h-[70px] bg-[black] flex flex-row justify-between px-[5%] text-[#fff] items-center  text-[12px] relative">
+        <nav class="h-[70px] bg-[black] flex flex-row justify-between px-[4%] text-[#fff] items-center  text-[12px] relative">
+            <button class="hidden">Search</button>
+            <div class="hidden">
+                <input type="text">
+                <button>search</button>
+                <div>
+                    <ul>
+                        <li><h2>vehicles</h2></li>
+                        <li><a href="#">New Cars</a></li>
+                        <li><a href="#">Configurators</a></li>
+                        <li><a href="#">Test Drive</a></li>
+                    </ul>
+                    <ul>
+                        <li><h2>Mercedes Benz Museum</h2></li>
+                        <li><a href="#">Museum</a></li>
+                        <li><a href="#">Exhebition</a></li>
+                        <li><a href="#">Visitor Information</a></li>
+                    </ul>
+                    <ul>
+                        <li><h2>Company</h2></li>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Inverstors</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="flex w-[30%] flex-row gap-[60px] font-sans">
                 <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Deutsch | English</p>
                 <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Provider/Privacy</p>
             </div>
             <img class="w-[112px] h-[42px] self-center" src="./assets/Images/MB-star_n_web (1).svg" alt="Benz-Icon">
             <div class="flex w-[30%] flex-row gap-[60px] font-sans justify-end">
-                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Search <i class='bx bx-search text-[14px]' ></i></p>
-                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Login</p>
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Search <i class='bx bx-search text-[12px]' ></i></p>
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Login</p>
             </div>
-            <div class="bg-[black] bg-opacity-90 backdrop-blur-[10px] backface-visible h-[64px] absolute top-[70px] left-0 right-0 px-[5%] flex items-center">
-                <ul class="flex flex-row justify-between w-[50%] mx-auto">
-                    <li><a class="text-[14px]" href="#">Art & Culture</a></li>
-                    <li><a class="text-[14px]" href="#">Sustainability</a></li>
-                    <li><a class="text-[14px]" href="#">Design</a></li>
-                    <li><a class="text-[14px]" href="#">Innovation</a></li>
-                    <li><a class="text-[14px]" href="#">Exclusive</a></li>
-                    <li><a class="text-[14px]" href="#">Vehicles</a></li>
+            <button id="openMenu" class="sm:block xl:hidden">Search</button>
+            <div class="bg-[black] bg-opacity-90 backdrop-blur-[10px] backface-visible absolute top-[70px] left-0 right-0 px-[5%] flex items-center sm:h-[100vh] hidden xl:h-[64px]">
+                <ul class="flex flex-row justify-between w-[60%] mx-auto">
+                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Art & Culture</a></li>
+                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Sustainability</a></li>
+                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Design</a></li>
+                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Innovation</a></li>
+                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Exclusive</a></li>
+                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Vehicles</a></li>
                 </ul>
             </div>
         </nav>

@@ -8,3 +8,13 @@
 }
 
 
+
+nav ul:hover li > a{
+    color: gray;
+}
+
+nav ul li > a:hover{
+    color: #fff;
+    
+}
+
