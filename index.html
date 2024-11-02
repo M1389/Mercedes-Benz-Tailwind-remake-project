@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="h-[70px] bg-[black] flex flex-row justify-between px-[4%] text-[#fff] items-center  text-[12px] relative">
+        <nav class="h-[70px] bg-[black] flex flex-row justify-between  px-[4%] text-[#fff] items-center  text-[12px] relative">
             <button class="hidden">Search</button>
             <div class="hidden">
                 <input type="text">
@@ -45,16 +45,15 @@
                 <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Search <i class='bx bx-search text-[12px]' ></i></p>
                 <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Login</p>
             </div>
-            <button id="openMenu" class="sm:block xl:hidden">Search</button>
-            <div class="bg-[black] bg-opacity-90 backdrop-blur-[10px] backface-visible absolute top-[70px] left-0 right-0 px-[5%] flex items-center sm:h-[100vh] hidden xl:h-[64px]">
-                <ul class="flex flex-row justify-between w-[60%] mx-auto">
-                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Art & Culture</a></li>
-                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Sustainability</a></li>
-                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Design</a></li>
-                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Innovation</a></li>
-                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Exclusive</a></li>
-                    <li class="group"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Vehicles</a></li>
-                </ul>
+            <button id="openMenu" class="sm:block xl:hidden duration-500">Menu</button>
+            <div id="linksDiv" class="bg-[black] bg-opacity-90 backdrop-blur-[10px] duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] flex items-center h-[100vh] min-[275px]:invisible min-[275px]:h-[0vh] xl:h-[64px] xl:visible">
+                <ul class="flex flex-col justify-between items-center w-[60%] mx-auto xl:flex-row">
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Art & Culture</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Sustainability</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Design</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Innovation</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Exclusive</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Vehicles</a></li>
             </div>
         </nav>
     </header>
