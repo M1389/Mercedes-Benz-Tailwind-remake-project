@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="h-[70px] bg-[black] flex flex-row justify-between  px-[4%] text-[#fff] items-center  text-[12px] relative">
-            <button class="hidden">Search</button>
+            <button class="sm:block xl:hidden">Search</button>
             <div class="hidden">
                 <input type="text">
                 <button>search</button>
@@ -37,8 +37,8 @@
                 </div>
             </div>
             <div class="flex w-[30%] flex-row gap-[60px] font-sans">
-                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Deutsch | English</p>
-                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff]">Provider/Privacy</p>
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Deutsch | English</p>
+                <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Provider/Privacy</p>
             </div>
             <img class="w-[112px] h-[42px] self-center" src="./assets/Images/MB-star_n_web (1).svg" alt="Benz-Icon">
             <div class="flex w-[30%] flex-row gap-[60px] font-sans justify-end">
@@ -54,6 +54,7 @@
                     <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Innovation</a></li>
                     <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Exclusive</a></li>
                     <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Vehicles</a></li>
+                </ul>
             </div>
         </nav>
     </header>
