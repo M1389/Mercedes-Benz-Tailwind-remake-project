@@ -10,29 +10,32 @@
 </head>
 <body>
     <header>
-        <nav class="h-[70px] bg-[black] flex flex-row justify-between  px-[4%] text-[#fff] items-center  text-[12px] relative">
-            <button class="sm:block xl:hidden">Search</button>
-            <div class="hidden">
-                <input type="text">
-                <button>search</button>
-                <div>
+        <nav class="h-[70px] bg-[black] flex flex-row justify-between  px-[4%] text-[#fff] items-center  text-[12px] relative z-30">
+            <button id="searchBtn" class="sm:block xl:hidden text-[16px]">Search</button>
+            <div class="hidden min-[275px]:block xl:hidden bg-[black] z-10 bg-opacity-90 backdrop-blur-[10px] duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] h-[100vh]">
+                <div class="mx-auto bg-violet-500 flex items-center justify-center my-[30px]">
+                    <input type="text" class="text-[20px] border-0 border-b-[2px] bg-transparent outline-none">
+                    <button class="text-[20px] bg-[#fff] p-3">search</button>
+                </div>
+                
+                <div class="flex flex-row gap-[20px] justify-around duration-500">
                     <ul>
-                        <li><h2>vehicles</h2></li>
-                        <li><a href="#">New Cars</a></li>
-                        <li><a href="#">Configurators</a></li>
-                        <li><a href="#">Test Drive</a></li>
+                        <li><h2 class="text-[16px] my-[5px]">Vehicles</h2></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">New Cars</a></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Configurators</a></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Test Drive</a></li>
                     </ul>
                     <ul>
-                        <li><h2>Mercedes Benz Museum</h2></li>
-                        <li><a href="#">Museum</a></li>
-                        <li><a href="#">Exhebition</a></li>
-                        <li><a href="#">Visitor Information</a></li>
+                        <li><h2 class="text-[16px] my-[5px]">Mercedes Benz Museum</h2></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Museum</a></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Exhebition</a></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Visitor Information</a></li>
                     </ul>
                     <ul>
-                        <li><h2>Company</h2></li>
-                        <li><a href="#">Overview</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Inverstors</a></li>
+                        <li><h2 class="text-[16px] my-[5px]">Company</h2></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Overview</a></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Career</a></li>
+                        <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">Inverstors</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,8 +48,8 @@
                 <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Search <i class='bx bx-search text-[12px]' ></i></p>
                 <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Login</p>
             </div>
-            <button id="openMenu" class="sm:block xl:hidden duration-500">Menu</button>
-            <div id="linksDiv" class="bg-[black] bg-opacity-90 backdrop-blur-[10px] duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] flex items-center h-[100vh] min-[275px]:invisible min-[275px]:h-[0vh] xl:h-[64px] xl:visible">
+            <button id="openMenu" class="sm:block xl:hidden duration-500 text-[16px]">Menu</button>
+            <div id="linksDiv" class="bg-[black] z-10 bg-opacity-90 backdrop-blur-[10px] duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] flex items-center flex-col justify-between h-[100vh] min-[275px]:invisible min-[275px]:h-[0vh] xl:h-[64px] xl:visible">
                 <ul class="flex flex-col justify-between items-center w-[60%] mx-auto xl:flex-row">
                     <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Art & Culture</a></li>
                     <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Sustainability</a></li>
@@ -55,6 +58,9 @@
                     <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Exclusive</a></li>
                     <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Vehicles</a></li>
                 </ul>
+                <div class="border-y-[1px] border-[#fff] w-[70%] mx-auto py-[2px] text-center xl:hidden">
+                    <a href="#" class="text-[14px] font-semibold">Login</a>
+                </div>
             </div>
         </nav>
     </header>
