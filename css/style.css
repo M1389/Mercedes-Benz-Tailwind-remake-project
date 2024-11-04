@@ -2,11 +2,22 @@
 
 
 
+
+
 @font-face {
     font-family: MCD;
     src: url(../assets/Fonts/Corporate\ A\ Bold.otf);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    height: 3000px;
+    background-color: red;
+}
 
 
 nav ul:hover li > a{
@@ -17,4 +28,8 @@ nav ul li > a:hover{
     color: #fff;
     
 }
+
+
+
+
 
