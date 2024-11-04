@@ -67,22 +67,24 @@ window.addEventListener('scroll',()=>{
 })
 
 
-if(window.scrollY > 110){
-    navBar.addEventListener('mouseover',()=>{
+navBar.addEventListener('mouseover',()=>{
+        
+    if(window.scrollY > 110){
         responsiveNav.classList.add('xl:h-[64px]');
         responsiveNav.classList.add('xl:visible');
         searchBtnEl.classList.remove('invisible');
         openMenuBtn.classList.remove('invisible');
-    });
-
-    navBar.addEventListener('mouseout',()=>{
-        responsiveNav.classList.remove('xl:h-[64px]');
-        responsiveNav.classList.remove('xl:visible');
-        searchBtnEl.classList.add('invisible');
-        openMenuBtn.classList.add('invisible');
+    }
         
-    })
-}   
+});
+
+navBar.addEventListener('mouseout',()=>{
+    responsiveNav.classList.remove('xl:h-[64px]');
+    responsiveNav.classList.remove('xl:visible');
+    searchBtnEl.classList.add('invisible');
+    openMenuBtn.classList.add('invisible');
+})
+     
 
 
 // nav bar js Ends here

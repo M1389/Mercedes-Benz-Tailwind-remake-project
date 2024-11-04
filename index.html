@@ -12,7 +12,7 @@
     <header>
         <nav id="navBar" class="h-[70px] bg-[black] flex flex-row justify-between  px-[4%] text-[#fff] items-center relative text-[12px] duration-500 z-10 top-0 left-0 right-0">
             <button id="searchBtn" class="sm:block xl:hidden duration-500 text-[16px]">Search</button>
-            <div id="searchContainer" class="hidden min-[275px]:block xl:hidden bg-[black] z-10 bg-opacity-90 backdrop-blur-[10px] duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] h-[0vh] invisible">
+            <div id="searchContainer" class="hidden overflow-hidden min-[275px]:block xl:hidden bg-[black] z-10 bg-opacity-90 backdrop-blur-[10px] duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] h-[0vh] invisible">
                 <div class="mx-auto w-[90%]  flex flex-row items-center justify-center my-[50px] border-b-[2px] border-gray-400 ">
                     <div class="w-[80%] mx-auto flex items-center justify-center">
                         <i class='bx bx-search text-[25px] mr-[-20px] text-[#fff]'></i>
@@ -21,7 +21,7 @@
                     <button class="text-[20px] bg-[#fff] px-[20px] py-[12px]  mb-[25px] rounded-[27px] text-[black] hover:bg-blue-500 self-end duration-500">search</button>
                 </div>
                 
-                <div id="searchLinks" class="flex flex-row gap-[10px] justify-around duration-500 flex-wrap">
+                <div id="searchLinks" class="flex flex-row gap-[10px] justify-around duration-500 flex-wrap overflow-hidden">
                     <ul>
                         <li><h2 class="text-[16px] my-[5px]">Vehicles</h2></li>
                         <li class="my-[20px]"><a href="#" class="text-[16px] duration-500">New Cars</a></li>
@@ -52,14 +52,14 @@
                 <p class="text-gray-200 duration-500 cursor-pointer hover:text-[#fff] hidden xl:block">Login</p>
             </div>
             <button id="openMenu" class="sm:block xl:hidden duration-500 text-[16px]">Menu</button>
-            <div id="linksDiv" class="bg-[black] z-10 bg-opacity-90 backdrop-blur-[10px] duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] flex items-center flex-col justify-between h-[100vh] min-[275px]:invisible min-[275px]:h-[0vh] xl:h-[64px] xl:visible">
+            <div id="linksDiv" class="bg-[black] z-10 bg-opacity-90 backdrop-blur-[10px] overflow-hidden duration-500 backface-visible absolute top-[70px] left-0 right-0 px-[5%] flex items-center flex-col justify-between h-[100vh] min-[275px]:invisible min-[275px]:h-[0vh] xl:h-[64px] xl:visible">
                 <ul class="flex flex-col justify-between items-center w-[60%] mx-auto xl:flex-row">
-                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-200" href="#">Art & Culture</a></li>
-                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-200" href="#">Sustainability</a></li>
-                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-200" href="#">Design</a></li>
-                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-200" href="#">Innovation</a></li>
-                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-200" href="#">Exclusive</a></li>
-                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-200" href="#">Vehicles</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Art & Culture</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Sustainability</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Design</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Innovation</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Exclusive</a></li>
+                    <li class="my-[20px] xl:my-none"><a class="text-[15px] text-[#fff] font-semibold duration-500" href="#">Vehicles</a></li>
                 </ul>
                 <div class="border-y-[1px] border-[#fff] w-[70%] mx-auto py-[2px] text-center xl:hidden">
                     <a href="#" class="text-[14px] font-semibold">Login</a>
@@ -67,6 +67,14 @@
             </div>
         </nav>
     </header>
+    <section id="sliderContainer">
+        <div>
+            <video autoplay muted loop>
+                <source src="./assets/Videos/original (2).mp4">
+
+            </video>
+        </div>
+    </section>
     <script src="./js/script.js"></script>
 </body>
 </html>
