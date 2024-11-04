@@ -91,3 +91,30 @@ navBar.addEventListener('mouseout',()=>{
 
 
 // nav bar js Ends here
+
+
+// Slider Goes here
+
+let textShowEl = document.querySelector('#textShowEl')
+let textH1El = document.querySelectorAll('.textH1');
+let textH2El = document.querySelector('#textH2');
+let textH3El = document.querySelector('#textH3');
+setTimeout(()=>{
+    for(let i of textH1El){
+        i.classList.remove('mt-[50px]');
+        i.classList.remove('opacity-0')
+        i.classList.add('opacity-1');
+    }
+},1000)
+
+setTimeout(()=>{
+    textH2El.classList.remove('mt-[50px]');
+    textH2El.classList.remove('opacity-0')
+    textH2El.classList.add('opacity-1');
+},1100)
+
+setTimeout(()=>{
+    textH3El.classList.remove('mt-[50px]');
+    textH3El.classList.remove('opacity-0')
+    textH3El.classList.add('opacity-1');
+},1200)
