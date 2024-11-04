@@ -30,14 +30,14 @@ searchBtnEl.addEventListener('click',()=>{
     }
 })
 
-
+let navBar = document.querySelector("#navBar");
 
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
   if (document.documentElement.scrollTop > 1) {
-    document.querySelector('#navBar').classList.remove('relative')
-    document.querySelector("#navBar").classList.add('fixed')
+    navBar.classList.remove('relative')
+    navBar.classList.add('fixed')
 
 
   } else {
@@ -46,8 +46,43 @@ function myFunction() {
 }
 
 
+let lastScrollPosition= 0
 window.addEventListener('scroll',()=>{
-    let scrollPosition = window.scrollY
+    let scrollPosition = window.scrollY;
+    
+    if(scrollPosition < lastScrollPosition){
+        responsiveNav.classList.add('xl:h-[64px]');
+        responsiveNav.classList.add('xl:visible');
+        searchBtnEl.classList.remove('invisible');
+        openMenuBtn.classList.remove('invisible');
+    }else{
+        responsiveNav.classList.remove('xl:h-[64px]');
+        responsiveNav.classList.remove('xl:visible');
+        searchBtnEl.classList.add('invisible');
+        openMenuBtn.classList.add('invisible');
+        
+    }
+
+    lastScrollPosition = scrollPosition
 })
+
+
+if(window.scrollY > 110){
+    navBar.addEventListener('mouseover',()=>{
+        responsiveNav.classList.add('xl:h-[64px]');
+        responsiveNav.classList.add('xl:visible');
+        searchBtnEl.classList.remove('invisible');
+        openMenuBtn.classList.remove('invisible');
+    });
+
+    navBar.addEventListener('mouseout',()=>{
+        responsiveNav.classList.remove('xl:h-[64px]');
+        responsiveNav.classList.remove('xl:visible');
+        searchBtnEl.classList.add('invisible');
+        openMenuBtn.classList.add('invisible');
+        
+    })
+}   
+
 
 // nav bar js Ends here
