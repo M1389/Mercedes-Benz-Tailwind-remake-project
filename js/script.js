@@ -79,10 +79,13 @@ navBar.addEventListener('mouseover',()=>{
 });
 
 navBar.addEventListener('mouseout',()=>{
-    responsiveNav.classList.remove('xl:h-[64px]');
-    responsiveNav.classList.remove('xl:visible');
-    searchBtnEl.classList.add('invisible');
-    openMenuBtn.classList.add('invisible');
+    if(window.scrollY > 110){
+        responsiveNav.classList.remove('xl:h-[64px]');
+        responsiveNav.classList.remove('xl:visible');
+        searchBtnEl.classList.add('invisible');
+        openMenuBtn.classList.add('invisible');
+    }
+    
 })
      
 
