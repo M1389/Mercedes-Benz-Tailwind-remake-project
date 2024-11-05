@@ -118,3 +118,13 @@ setTimeout(()=>{
     textH3El.classList.remove('opacity-0')
     textH3El.classList.add('opacity-1');
 },1200)
+
+let firstMovieEl = document.querySelector('#firstMovie');
+let secondMovieEl = document.querySelector('#secondMovie');
+let saveView = 0
+window.addEventListener('scroll',()=>{
+    if(window.scrollY > 0 && window.scrollY < 10){
+        secondMovieEl.scrollIntoView()
+    }
+    
+})
