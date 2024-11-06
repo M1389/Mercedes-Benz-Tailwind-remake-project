@@ -121,20 +121,40 @@ setTimeout(()=>{
 
 let firstMovieEl = document.querySelector('#firstMovie');
 let secondMovieEl = document.querySelector('#secondMovie');
+let scrollStatusEl = document.querySelector('#scrollStatus');
+let scrollTopEl = document.querySelector('#scrollTop')
+let scrollDownEl = document.querySelector('#scrollDown')
+
 
 let lastScrollPositionsecond= 0
 window.addEventListener('scroll',()=>{
     let scrollPositionsecond = window.scrollY;
     if(scrollPositionsecond > lastScrollPositionsecond){
         if(window.scrollY > 0 && window.scrollY < 50){
-            secondMovieEl.scrollIntoView()
+            secondMovieEl.scrollIntoView();
+            
+            scrollTopEl.classList.remove('flex-1')
+            scrollTopEl.classList.add('flex-2')
+            scrollDownEl.classList.remove('flex-2')
+            scrollDownEl.classList.add('flex-1')
+            
+            
         }
     }
     if(scrollPositionsecond < lastScrollPositionsecond){
         if(window.scrollY > 700 && window.scrollY < 1000){
             firstMovieEl.scrollIntoView()
+            scrollTopEl.classList.remove('flex-2')
+            scrollTopEl.classList.add('flex-1')
+            scrollDownEl.classList.remove('flex-1')
+            scrollDownEl.classList.add('flex-2')
+            
         }
     }
 
     lastScrollPositionsecond = scrollPositionsecond
 })
+
+
+
+

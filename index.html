@@ -67,9 +67,19 @@
             </div>
         </nav>
     </header>
-    <section id="sliderContainer">
-        <div id="firstMovie" class="relative h-[90vh]">
-            <video class="w-full h-full index-3 object-cover" autoplay muted loop>
+    <section id="sliderContainer" class="relative">
+        <div id="scrollStatus" class="fixed duration-500 top-[40%] right-[3%] h-[200px] w-[10px] z-10 w-[2px] bg-transparent">
+            <div class="h-full flex flex-col justify-between gap-[30px]">
+                <div id="scrollTop" class="bg-[#fff] h-[90%] duration-500  text-transparent flex-1">
+                    1
+                </div>
+                <div id="scrollDown" class="bg-[#fff]  duration-500  text-transparent flex-2">
+                 2   
+                </div>
+            </div>
+        </div>
+        <div id="firstMovie" class="relative h-[90vh] index-3">
+            <video class="w-full h-full z-2 object-cover" autoplay muted loop>
                 <source src="./assets/Videos/original (2).mp4">
             </video>
             <div class="absolute xl:top-[40%] xl:translate-x-[-40%]  xl:left-[20%] duration-500 min-[275px]:top-[60%] min-[275px]:left-[50%] min-[275px]:translate-x-[-50%] max-[1051px]:w-[80%]  max-[671px]:w-[95%]">
