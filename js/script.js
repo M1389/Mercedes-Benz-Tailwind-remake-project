@@ -121,10 +121,20 @@ setTimeout(()=>{
 
 let firstMovieEl = document.querySelector('#firstMovie');
 let secondMovieEl = document.querySelector('#secondMovie');
-let saveView = 0
+
+let lastScrollPositionsecond= 0
 window.addEventListener('scroll',()=>{
-    if(window.scrollY > 0 && window.scrollY < 10){
-        secondMovieEl.scrollIntoView()
+    let scrollPositionsecond = window.scrollY;
+    if(scrollPositionsecond > lastScrollPositionsecond){
+        if(window.scrollY > 0 && window.scrollY < 50){
+            secondMovieEl.scrollIntoView()
+        }
     }
-    
+    if(scrollPositionsecond < lastScrollPositionsecond){
+        if(window.scrollY > 700 && window.scrollY < 1000){
+            firstMovieEl.scrollIntoView()
+        }
+    }
+
+    lastScrollPositionsecond = scrollPositionsecond
 })
