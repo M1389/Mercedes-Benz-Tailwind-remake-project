@@ -124,19 +124,33 @@ let secondMovieEl = document.querySelector('#secondMovie');
 let scrollStatusEl = document.querySelector('#scrollStatus');
 let scrollTopEl = document.querySelector('#scrollTop')
 let scrollDownEl = document.querySelector('#scrollDown')
-
+let scrollBlur = document.querySelector('#scrollBlur')
+console.log(scrollBlur)
 
 let lastScrollPositionsecond= 0
 window.addEventListener('scroll',()=>{
     let scrollPositionsecond = window.scrollY;
+    
+    if(window.scrollY > 1000){
+        scrollStatusEl.classList.add('hidden')
+    }else{
+        scrollStatusEl.classList.remove('hidden')
+    }
+    
+    
     if(scrollPositionsecond > lastScrollPositionsecond){
         if(window.scrollY > 0 && window.scrollY < 50){
             secondMovieEl.scrollIntoView();
+            scrollTopEl.classList.remove('flex-2')
+            scrollTopEl.classList.add('flex-1')
+            scrollDownEl.classList.remove('flex-1')
+            scrollDownEl.classList.add('flex-2')
+            setTimeout(()=>{
+                scrollBlur.classList.remove('h-[90vh]')
+                scrollBlur.classList.remove('hidden')
+                scrollBlur.classList.add('h-[1px]')
+            },500) 
             
-            scrollTopEl.classList.remove('flex-1')
-            scrollTopEl.classList.add('flex-2')
-            scrollDownEl.classList.remove('flex-2')
-            scrollDownEl.classList.add('flex-1')
             
             
         }
@@ -144,11 +158,13 @@ window.addEventListener('scroll',()=>{
     if(scrollPositionsecond < lastScrollPositionsecond){
         if(window.scrollY > 700 && window.scrollY < 1000){
             firstMovieEl.scrollIntoView()
-            scrollTopEl.classList.remove('flex-2')
-            scrollTopEl.classList.add('flex-1')
-            scrollDownEl.classList.remove('flex-1')
-            scrollDownEl.classList.add('flex-2')
-            
+            scrollTopEl.classList.remove('flex-1')
+            scrollTopEl.classList.add('flex-2')
+            scrollDownEl.classList.remove('flex-2')
+            scrollDownEl.classList.add('flex-1')
+            scrollBlur.classList.remove('h-[1px]')
+            scrollBlur.classList.add('h-[90vh]')
+            // scrollBlur.classList.add('hidden')
         }
     }
 

@@ -67,13 +67,13 @@
             </div>
         </nav>
     </header>
-    <section id="sliderContainer" class="relative">
+    <section id="sliderContainer" class="relative overflow-hidden">
         <div id="scrollStatus" class="fixed duration-500 top-[40%] right-[3%] h-[200px] w-[10px] z-10 w-[2px] bg-transparent">
             <div class="h-full flex flex-col justify-between gap-[30px]">
-                <div id="scrollTop" class="bg-[#fff] h-[90%] duration-500  text-transparent flex-1">
+                <div id="scrollTop" class="bg-[#fff] min-h-[20%] duration-500  text-transparent flex-2">
                     1
                 </div>
-                <div id="scrollDown" class="bg-[#fff]  duration-500  text-transparent flex-2">
+                <div id="scrollDown" class="bg-[#fff]  duration-500  text-transparent flex-1">
                  2   
                 </div>
             </div>
@@ -95,8 +95,10 @@
                 
             </div>
         </div>
-        <div class="h-[300px] bg-[black]">
-            1
+        <div class="h-[300px] bg-[black] relative">
+            <div id="scrollBlur" class="bg-[black] duration-500 bg-opacity-90 backface-visible backdrop-blur-[10px] absolute top-[300px] z-10 left-0 right-0 h-[90vh]">
+                1
+            </div>
         </div>
         <div id="secondMovie" class="relative h-[90vh]">
             <video class="w-full h-full index-3 object-cover" autoplay muted loop>
