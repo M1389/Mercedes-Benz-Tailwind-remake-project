@@ -99,25 +99,32 @@ let textShowEl = document.querySelector('#textShowEl')
 let textH1El = document.querySelectorAll('.textH1');
 let textH2El = document.querySelector('#textH2');
 let textH3El = document.querySelector('#textH3');
-setTimeout(()=>{
-    for(let i of textH1El){
-        i.classList.remove('mt-[50px]');
-        i.classList.remove('opacity-0')
-        i.classList.add('opacity-1');
-    }
-},1000)
 
-setTimeout(()=>{
-    textH2El.classList.remove('mt-[50px]');
-    textH2El.classList.remove('opacity-0')
-    textH2El.classList.add('opacity-1');
-},1100)
+let transitionOneSecond = ()=>{
+    setTimeout(()=>{
+        for(let i of textH1El){
+            i.classList.remove('mt-[50px]');
+            i.classList.remove('opacity-0')
+            i.classList.add('opacity-1');
+        }
+    },1000)
 
-setTimeout(()=>{
-    textH3El.classList.remove('mt-[50px]');
-    textH3El.classList.remove('opacity-0')
-    textH3El.classList.add('opacity-1');
-},1200)
+    
+    setTimeout(()=>{
+        textH2El.classList.remove('mt-[50px]');
+        textH2El.classList.remove('opacity-0')
+        textH2El.classList.add('opacity-1');
+    },1100)
+
+    setTimeout(()=>{
+        textH3El.classList.remove('mt-[50px]');
+        textH3El.classList.remove('opacity-0')
+        textH3El.classList.add('opacity-1');
+    },1200)
+}
+
+transitionOneSecond()
+
 
 let firstMovieEl = document.querySelector('#firstMovie');
 let secondMovieEl = document.querySelector('#secondMovie');
@@ -125,7 +132,7 @@ let scrollStatusEl = document.querySelector('#scrollStatus');
 let scrollTopEl = document.querySelector('#scrollTop')
 let scrollDownEl = document.querySelector('#scrollDown')
 let scrollBlur = document.querySelector('#scrollBlur')
-console.log(scrollBlur)
+
 
 let lastScrollPositionsecond= 0
 window.addEventListener('scroll',()=>{
@@ -141,32 +148,37 @@ window.addEventListener('scroll',()=>{
     if(scrollPositionsecond > lastScrollPositionsecond){
         if(window.scrollY > 0 && window.scrollY < 50){
             secondMovieEl.scrollIntoView();
-            scrollTopEl.classList.remove('flex-2')
-            scrollTopEl.classList.add('flex-1')
-            scrollDownEl.classList.remove('flex-1')
-            scrollDownEl.classList.add('flex-2')
+            scrollTopEl.classList.remove('flex-1')
+            scrollTopEl.classList.add('flex-2')
+            scrollDownEl.classList.remove('flex-2')
+            scrollDownEl.classList.add('flex-1')
             setTimeout(()=>{
                 scrollBlur.classList.remove('h-[90vh]')
                 scrollBlur.classList.remove('hidden')
                 scrollBlur.classList.add('h-[1px]')
             },500) 
+
+            
+            
             
             
             
         }
+    
     }
     if(scrollPositionsecond < lastScrollPositionsecond){
         if(window.scrollY > 700 && window.scrollY < 1000){
             firstMovieEl.scrollIntoView()
-            scrollTopEl.classList.remove('flex-1')
-            scrollTopEl.classList.add('flex-2')
-            scrollDownEl.classList.remove('flex-2')
-            scrollDownEl.classList.add('flex-1')
+            scrollTopEl.classList.remove('flex-2')
+            scrollTopEl.classList.add('flex-1')
+            scrollDownEl.classList.remove('flex-1')
+            scrollDownEl.classList.add('flex-2')
             scrollBlur.classList.remove('h-[1px]')
             scrollBlur.classList.add('h-[90vh]')
             // scrollBlur.classList.add('hidden')
         }
     }
+    
 
     lastScrollPositionsecond = scrollPositionsecond
 })
