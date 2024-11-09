@@ -184,5 +184,28 @@ window.addEventListener('scroll',()=>{
 })
 
 
+// second part goes here
 
+let secondPartTransition = document.querySelectorAll('#transition')
+console.log(secondPartTransition)
+
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 1100) {
+        setTimeout(()=>{
+            for(let i of secondPartTransition){
+                i.classList.remove('mt-[50px]');
+                i.classList.remove('opacity-0')
+                i.classList.add('opacity-1');
+            }
+        },1000)
+    }else{
+        setTimeout(()=>{
+            for(let i of secondPartTransition){
+                i.classList.add('mt-[50px]');
+                i.classList.add('opacity-0')
+                i.classList.remove('opacity-1');
+            }
+        },1000)
+    }
+})
 
