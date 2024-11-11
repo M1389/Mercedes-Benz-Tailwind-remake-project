@@ -222,3 +222,39 @@ window.addEventListener('scroll' , ()=>{
         }
     }
 })
+
+
+// Footer goes here
+let headerFooterEL = document.querySelector('#headerFooter')
+let moveContainerEl = document.querySelector('#moveContainer')
+let purchaseText = document.querySelector('#purchase')
+let servicesText = document.querySelector('#services')
+let topUl = document.querySelector('#topLinks')
+let downUl = document.querySelector('#downLinks')
+
+
+window.addEventListener('scroll',()=>{
+    let hieghtEl = headerFooterEL.clientHeight / 2
+    let topParentEL = headerFooterEL.getBoundingClientRect().top
+    let topEl = moveContainerEl.getBoundingClientRect().top
+    let resultEl = topParentEL - topEl
+    if(resultEl > -hieghtEl){
+        topUl.classList.remove('mt-[50px]')
+        topUl.classList.remove('opacity-0')
+        purchaseText.classList.remove('text-gray-600')
+    }else{
+        topUl.classList.add('mt-[50px]')
+        topUl.classList.add('opacity-0')
+        purchaseText.classList.add('text-gray-600')
+    }
+
+    if(resultEl < -hieghtEl){
+        downUl.classList.remove('-ml-[150px]')
+        downUl.classList.remove('opacity-0')
+        servicesText.classList.remove('text-gray-600')
+    }else{
+        downUl.classList.add('-ml-[150px]')
+        downUl.classList.add('opacity-0')
+        servicesText.classList.add('text-gray-600')
+    }
+})
