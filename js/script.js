@@ -187,7 +187,6 @@ window.addEventListener('scroll',()=>{
 // second part goes here
 
 let secondPartTransition = document.querySelectorAll('#transition')
-console.log(secondPartTransition)
 
 window.addEventListener('scroll', ()=>{
     if(window.scrollY > 1100) {
@@ -209,3 +208,17 @@ window.addEventListener('scroll', ()=>{
     }
 })
 
+let windowView = window.innerHeight * 0.9
+window.addEventListener('scroll' , ()=>{
+    let allDivs = document.querySelectorAll('#viewM')
+    for(let i of allDivs){
+        let top = i.getBoundingClientRect().top
+        if(top < windowView){
+            i.classList.remove('mt-[50px]')
+            i.classList.remove('opacity-0')
+        }else{
+            i.classList.add('mt-[50px]')
+            i.classList.add('opacity-0')
+        }
+    }
+})
