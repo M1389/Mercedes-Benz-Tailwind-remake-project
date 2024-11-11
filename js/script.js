@@ -241,20 +241,20 @@ window.addEventListener('scroll',()=>{
     if(resultEl > -hieghtEl){
         topUl.classList.remove('mt-[50px]')
         topUl.classList.remove('opacity-0')
-        purchaseText.classList.remove('text-gray-600')
+        purchaseText.classList.remove('text-gray-400')
     }else{
         topUl.classList.add('mt-[50px]')
         topUl.classList.add('opacity-0')
-        purchaseText.classList.add('text-gray-600')
+        purchaseText.classList.add('text-gray-400')
     }
 
     if(resultEl < -hieghtEl){
         downUl.classList.remove('-ml-[150px]')
         downUl.classList.remove('opacity-0')
-        servicesText.classList.remove('text-gray-600')
+        servicesText.classList.remove('text-gray-400')
     }else{
         downUl.classList.add('-ml-[150px]')
         downUl.classList.add('opacity-0')
-        servicesText.classList.add('text-gray-600')
+        servicesText.classList.add('text-gray-400')
     }
 })
